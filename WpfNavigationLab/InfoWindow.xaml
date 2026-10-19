@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfNavigationLab.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfNavigationLab"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="450" Width="800">
+    <Grid Margin="30">
+
+        <StackPanel>
+
+            <TextBlock Text="Külön Window"
+                   FontSize="26"
+                   FontWeight="Bold"
+                   Foreground="#1E293B"
+                   HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Ez az ablak nem Page, hanem önálló Window."
+                   Margin="0,10,0,20"
+                   Foreground="#64748B"
+                   HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Írd be a neved:"
+                   FontWeight="Bold"/>
+
+            <TextBox x:Name="txtName"
+                 Height="40"
+                 FontSize="16"
+                 Padding="8"
+                 Margin="0,5,0,15"/>
+
+            <Button Content="Köszönés"
+                Height="40"
+                Margin="0,0,0,10"
+                Click="Hello_Click"/>
+
+            <Button Content="Ablak címének átállítása"
+                Height="40"
+                Margin="0,0,0,10"
+                Click="SetTitle_Click"/>
+
+            <Button Content="Ablak bezárása"
+                Height="40"
+                Click="Close_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>

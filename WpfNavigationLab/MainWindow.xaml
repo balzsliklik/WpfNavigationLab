@@ -1,0 +1,73 @@
+﻿<Window x:Class="WpfNavigationLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfNavigationLab"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="215">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- BAL OLDALI MENÜ -->
+        <Border Grid.Column="0"
+            Background="#1E293B">
+
+            <StackPanel Margin="20">
+
+                <TextBlock Text="WPF LAB"
+                       Foreground="White"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="0,10,0,30"/>
+
+                <Button Content="Főoldal"
+                    Height="40"
+                    Margin="0,0,0,10"
+                    Click="Home_Click"/>
+
+                <Button Content="Profil"
+                    Height="40"
+                    Margin="0,0,0,10"
+                    Click="Profile_Click"/>
+
+                <Button Content="Beállítások"
+                    Height="40"
+                    Margin="0,0,0,25"
+                    Click="Settings_Click"/>
+
+                <TextBlock Text="Külön Window"
+                       Foreground="#94A3B8"
+                       FontWeight="Bold"
+                       Margin="0,0,0,10"/>
+
+                <Button Content="Új ablak - Show()"
+                    Height="40"
+                    Margin="0,0,0,10"
+                    Click="OpenWindow_Click"/>
+
+                <Button Content="Modális - ShowDialog()"
+                    Height="40"
+                    Margin="0,0,0,10"
+                    Click="OpenDialog_Click"/>
+
+                <Button Content="Súgó (HelpWindow)"
+                    Height="40"
+                    Click="HelpWindow_Click"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <!-- IDE TÖLTŐDNEK BE A PAGE-EK -->
+        <Frame x:Name="mainFrame"
+           Grid.Column="1"
+           NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+
+</Window>
